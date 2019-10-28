@@ -25,9 +25,7 @@ $("#submit").on("click", function (event) {
     emailAddress = $("#emailinput").val().trim();
     paragraph = $("#paragraphinput").val();
     console.log("clicl");
-
-    $(".form-group").empty();
-    $("#submit").empty();
+    hide();
   
     database.ref().push({
         name: name,
@@ -58,6 +56,18 @@ database.ref().on("value", function (snapshot) {
 
 
 });
+
+
+
+
+function hide(){
+    $(".form-group").empty();
+    $(".form-group").hide();
+    $("#submit").hide();
+
+    $("#hide").html("<h1> Thank you " + name + " !");
+
+}
 
 
  
