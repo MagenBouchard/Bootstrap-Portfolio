@@ -60,8 +60,9 @@ database.ref().on("value", function (snapshot) {
 function hide(){
     $(".form-group").hide();
     $("#submit").hide();
+    $("#contactme").hide();
 
-    $(".hidemessage").html("<h1> Thank you " + name + "!</h1>");
+    $(".hidemessage").html("<h1> Thank you " + name + "! We will be in touch! </h1>");
 
 }
 
