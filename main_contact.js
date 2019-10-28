@@ -24,7 +24,7 @@ $("#submit").on("click", function (event) {
     name = $("#nameinput").val().trim();
     emailAddress = $("#emailinput").val().trim();
     paragraph = $("#paragraphinput").val();
-    console.log("clicl");
+    // console.log("clicl");
     hide();
   
     database.ref().push({
@@ -50,9 +50,6 @@ $("#submit").on("click", function (event) {
 
 database.ref().on("value", function (snapshot) {
 
-    console.log(snapshot.val());
-    console.log(snapshot.val().name);
-
 
 
 });
@@ -61,11 +58,10 @@ database.ref().on("value", function (snapshot) {
 
 
 function hide(){
-    $(".form-group").empty();
     $(".form-group").hide();
     $("#submit").hide();
 
-    $("#hidemessage").html("<h1> Thank you " + name + " !</h1>");
+    $(".hidemessage").html("<h1> Thank you " + name + "!</h1>");
 
 }
 
