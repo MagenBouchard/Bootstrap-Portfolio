@@ -65,7 +65,7 @@ function hide(){
     $(".form-group").hide();
     $("#submit").hide();
 
-    $("#hide").html("<h1> Thank you " + name + " !");
+    $("#hidemessage").html("<h1> Thank you " + name + " !</h1>");
 
 }
 
